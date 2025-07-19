@@ -314,3 +314,33 @@ footer a:hover {
     max-width: 300px;
   }
 }
+/* Top navigation bar styles */
+.top-nav {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+/* Style for both buttons and anchor links inside nav */
+.top-nav button,
+.top-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f5f5dc; /* Beige */
+  color: #333; /* Dark text */
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none; /* Removes underline for <a> */
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.top-nav button:hover,
+.top-nav a:hover {
+  background-color: #e6e6cc; /* Slightly darker beige on hover */
+}
