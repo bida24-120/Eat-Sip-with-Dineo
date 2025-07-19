@@ -4,37 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recipes - Eat and Sip with Dineo</title>
-  <link rel="stylesheet" href="recipes.css" />
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="nav-bar">
-    <button onclick="location.href='index.html'"><span class="material-icons">home</span> Home</button>
-    <button class="active"><span class="material-icons">restaurant_menu</span> Recipes</button>
-    <button><span class="material-icons">local_dining</span> Catering</button>
-    <button><span class="material-icons">local_bar</span> Drinks</button>
-  </nav>
+  <header>
+    <h1 class="site-header">Eat and Sip with Dineo</h1>
+  </header>
 
-  <!-- Recipe Categories -->
-  <main class="categories-container">
-    <div class="category">
-      <img src="car1.jpg" alt="Carbohydrates">
-      <button>Carbohydrates</button>
-    </div>
-    <div class="category">
-      <img src="pro1.jpg" alt="Proteins">
-      <button>Proteins</button>
-    </div>
-    <div class="category">
-      <img src="yum1.jpg" alt="Dessert">
-      <button>Dessert</button>
-    </div>
-    <div class="category">
-      <img src="pot1.jpg" alt="Baked">
-      <button>Baked</button>
-    </div>
-  </main>
+  <div class="layout">
+    <aside class="sidebar">
+      <ul>
+        <li><span class="material-icons">person</span> Profile</li>
+        <li><span class="material-icons">login</span> Sign In</li>
+        <li><span class="material-icons">person_add</span> Sign Up</li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <nav class="nav-bar">
+        <a href="index.html"><span class="material-icons">home</span> Home</a>
+        <a href="recipes.html" class="active"><span class="material-icons">restaurant_menu</span> Recipes</a>
+        <a href="#"><span class="material-icons">local_dining</span> Catering</a>
+        <a href="#"><span class="material-icons">local_bar</span> Drinks</a>
+      </nav>
+
+      <section class="category-section">
+        <h2>Recipe Categories</h2>
+        <div class="category-grid">
+          <div class="category-card">
+            <img src="car1.jpg" alt="Carbohydrates" />
+            <button>Carbohydrates</button>
+          </div>
+          <div class="category-card">
+            <img src="pro1.jpg" alt="Proteins" />
+            <button>Proteins</button>
+          </div>
+          <div class="category-card">
+            <img src="yum1.jpg" alt="Dessert" />
+            <button>Dessert</button>
+          </div>
+          <div class="category-card">
+            <img src="pot1.jpg" alt="Baked" />
+            <button>Baked</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+  </footer>
 </body>
 </html>
