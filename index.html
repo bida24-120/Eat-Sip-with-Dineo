@@ -2,44 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eat and Sip with Dineo</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="sidebar">
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
       <ul>
-        <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
-        <li><a href="#signin"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
-        <li><a href="#signup"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+        <li><span class="material-icons">person</span> Customer Profile</li>
+        <li><span class="material-icons">login</span> Sign In</li>
+        <li><span class="material-icons">person_add</span> Sign Up</li>
       </ul>
-    </nav>
+    </aside>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#recipes"><i class="fas fa-book-open"></i> Recipes</a></li>
-        <li><a href="#catering"><i class="fas fa-utensils"></i> Catering</a></li>
-        <li><a href="#drinks"><i class="fas fa-glass-cheers"></i> Drinks</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- Top Navigation -->
+      <nav class="top-nav">
+        <button onclick="navigate('recipes')"><span class="material-icons">restaurant_menu</span> Recipes</button>
+        <button onclick="navigate('catering')"><span class="material-icons">local_dining</span> Catering</button>
+        <button onclick="navigate('drinks')"><span class="material-icons">local_bar</span> Drinks</button>
+      </nav>
 
-  <main>
-    <section class="hero">
-      <img src="https://images.unsplash.com/photo-1604909053123-cb9f3b438a8a" alt="Food and Drinks Display">
-      <div class="hero-text">
-        <h1>Eat and Sip with Dineo</h1>
-      </div>
-    </section>
-  </main>
+      <!-- Hero Image -->
+      <section class="hero">
+        <img src="num1.jpg" alt="Food and Drinks">
+        <h1 class="site-title">Eat and Sip with Dineo</h1>
+      </section>
+    </main>
+  </div>
 
+  <!-- Footer -->
   <footer>
-    <div class="footer-links">
-      <a href="#about"><i class="fas fa-info-circle"></i> About Us</a>
-      <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
-    </div>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
   </footer>
 </body>
 </html>
