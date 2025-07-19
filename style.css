@@ -1,4 +1,4 @@
-/* Reset & Fonts */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -6,41 +6,23 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #f5f5dc; /* Beige background */
-  color: #333;
+  color: #4a4a4a;
+}
+
+/* Container layout */
+.container {
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
-}
-
-/* Header */
-header {
-  background-color: #fff7e6;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.site-header {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  color: #b14e4e;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-}
-
-/* Layout */
-.layout {
-  display: flex;
-  flex: 1;
 }
 
 /* Sidebar */
 .sidebar {
   width: 200px;
-  background-color: #f2d6ae;
+  background-color: #ede6d6;
   padding-top: 40px;
-  min-height: 100%;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar ul {
@@ -51,127 +33,118 @@ header {
   padding: 15px 20px;
   display: flex;
   align-items: center;
-  color: #3b3b3b;
   cursor: pointer;
+  color: #4a4a4a;
   transition: background 0.3s ease;
 }
 
 .sidebar li:hover {
-  background-color: #e6ba92;
+  background-color: #d9d0b8;
+  color: #2e2e2e;
 }
 
 .sidebar .material-icons {
   margin-right: 10px;
 }
 
-/* Navigation */
-.nav-bar {
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Store name header */
+.store-header {
+  background-color: #fff8e1;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.store-header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.8rem;
+  color: #b35429;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(179, 84, 41, 0.5);
+}
+
+/* Top navigation */
+.top-nav {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  padding: 20px;
-  background-color: #fbe9cc;
+  gap: 35px;
+  background-color: #ede6d6;
+  padding: 18px 0;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
   flex-wrap: wrap;
 }
 
-.nav-bar button {
+.top-nav button {
   background: none;
   border: none;
-  font-size: 16px;
-  font-weight: bold;
-  color: #5a2e2e;
-  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6d4a1e;
   display: flex;
   align-items: center;
-  gap: 6px;
-  transition: color 0.3s;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
 }
 
-.nav-bar button:hover {
-  color: #c9443b;
+.top-nav button:hover {
+  background-color: #b35429;
+  color: #fff;
 }
 
-/* Hero Section */
-.hero-section {
+/* Hero container */
+.hero-container {
   display: flex;
   justify-content: center;
-  padding: 30px;
-  background-color: #fffaf0;
+  padding: 40px 20px;
+  background-color: #fff8e1;
+  flex-grow: 1;
 }
 
-.hero-image {
+.hero {
   position: relative;
-  max-width: 100%;
-  width: 90%;
-  max-height: 450px;
-  border-radius: 12px;
+  width: 100%;
+  max-width: 900px;
+  height: 450px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.hero-image img {
+.hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.hero-title {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.85);
-  padding: 12px 30px;
-  border-radius: 10px;
-  font-size: 24px;
-  color: #8c2f2f;
-  font-weight: bold;
-  font-family: 'Playfair Display', serif;
-  max-width: 90%;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  border-radius: 15px;
 }
 
 /* Footer */
 footer {
-  background-color: #f2d6ae;
+  background-color: #ede6d6;
   text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
+  padding: 22px;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.1);
 }
 
 footer a {
-  color: #333;
-  margin: 0 10px;
+  color: #6d4a1e;
+  margin: 0 20px;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .layout {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .hero-title {
-    font-size: 18px;
-    padding: 10px 20px;
-  }
-
-  .nav-bar {
-    flex-direction: column;
-    align-items: center;
-  }
+  color: #b35429;
 }
