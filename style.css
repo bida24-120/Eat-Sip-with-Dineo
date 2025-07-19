@@ -268,8 +268,6 @@ body {
   margin-top: 10px;
   color: #8b5e3c;
 }
-/* ... keep your previous styles ... */
-
 /* Recipe card container */
 .recipe-categories {
   display: flex;
